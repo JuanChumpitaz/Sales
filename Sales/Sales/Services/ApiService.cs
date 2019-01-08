@@ -22,7 +22,7 @@ namespace Sales.Services
                 var url = $"{prefix}{controller}";
                 var response = await client.GetAsync(url);
                 var answer = await response.Content.ReadAsStringAsync();
-                if (!response.IsSuccessStatusCode) // si fallo
+                if (!response.IsSuccessStatusCode) // si falló
                 {
                     return new Response
                     {
