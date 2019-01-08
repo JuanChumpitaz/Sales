@@ -14,5 +14,6 @@ namespace Sales.Domain.Models
         {
         }
 
+        public System.Data.Entity.DbSet<Sales.Common.Models.TBM_PRODU_JCH> TBM_PRODU_JCH { get; set; }
     }
 }

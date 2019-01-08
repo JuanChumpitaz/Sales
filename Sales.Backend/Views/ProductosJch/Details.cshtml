@@ -1,0 +1,58 @@
+﻿@model Sales.Common.Models.TBM_PRODU_JCH
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TBM_PRODU_JCH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DES_PRODU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DES_PRODU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_USUAR_CREAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_USUAR_CREAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FEC_USUAR_CREAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FEC_USUAR_CREAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_USUAR_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_USUAR_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FEC_USUAR_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FEC_USUAR_MODIF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COD_PRODU }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

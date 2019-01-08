@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Sales.Common.Models.TBM_PRODU_JCH>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DES_PRODU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_USUAR_CREAC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEC_USUAR_CREAC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_USUAR_MODIF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEC_USUAR_MODIF)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DES_PRODU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_USUAR_CREAC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEC_USUAR_CREAC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_USUAR_MODIF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEC_USUAR_MODIF)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.COD_PRODU }) |
+            @Html.ActionLink("Details", "Details", new { id=item.COD_PRODU }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.COD_PRODU })
+        </td>
+    </tr>
+}
+
+</table>
