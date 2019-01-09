@@ -5,9 +5,12 @@
              x:Class="Sales.App">
     <Application.Resources>
         <ResourceDictionary>
+            
             <!--Locator-->
-
             <infra:InstanceLocator x:Key="Locator"/>
+            
+            <!--Parameters-->
+            <x:String x:Key="UrlAPI">http://apimyperjuan.azurewebsites.net</x:String>
 
 
         </ResourceDictionary>

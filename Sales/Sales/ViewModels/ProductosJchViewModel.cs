@@ -41,7 +41,18 @@ namespace Sales.ViewModels
         {
             this.IsRefreshing = true;
 
-            var response = await this.apiService.GetList<TBM_PRODU_JCH>("http://apimyperjuan.azurewebsites.net", "/api","/ProductosJch");
+            var connection = await this.apiService.CheckConnection();
+
+            if (!connection.IsSuccess)
+            {
+                this.IsRefreshing = false;
+                await Application.Current.MainPage.DisplayAlert("Error", connection.Message, "Accept");
+                return;
+            }
+
+            var url = Application.Current.Resources["UrlAPI"].ToString();
+
+            var response = await this.apiService.GetList<TBM_PRODU_JCH>(url, "/api","/ProductosJch");
             if (!response.IsSuccess)
             {
                 this.IsRefreshing = false;
