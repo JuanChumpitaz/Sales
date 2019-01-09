@@ -15,7 +15,7 @@ namespace Sales
         {
             InitializeComponent();
 
-            MainPage = new ProductosJchPage();// Inicio del proyecto
+            MainPage = new NavigationPage(new  ProductosJchPage());// Inicio del proyecto
         }
 
         protected override void OnStart()

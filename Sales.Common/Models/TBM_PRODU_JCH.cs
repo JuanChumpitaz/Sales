@@ -15,5 +15,10 @@ namespace Sales.Common.Models
         public DateTime FEC_USUAR_CREAC {get;set;}
         public string COD_USUAR_MODIF {get;set;}
         public DateTime FEC_USUAR_MODIF {get;set;}
+
+        public override string ToString()
+        {
+            return this.DES_PRODU;
+        }
     }
 }

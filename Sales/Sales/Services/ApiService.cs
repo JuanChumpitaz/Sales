@@ -7,8 +7,9 @@ namespace Sales.Services
     using System.Collections.Generic;
     using System.Net.Http;
     using System.Threading.Tasks;
+    using Common.Models;
     using Newtonsoft.Json;
-    using Sales.Common.Models;
+    
 
     public class ApiService
     {
