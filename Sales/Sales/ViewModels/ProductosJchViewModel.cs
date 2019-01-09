@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using Sales.Common.Models;
+using Sales.Helpers;
 using Sales.Services;
 using Xamarin.Forms;
 
@@ -46,17 +47,19 @@ namespace Sales.ViewModels
             if (!connection.IsSuccess)
             {
                 this.IsRefreshing = false;
-                await Application.Current.MainPage.DisplayAlert("Error", connection.Message, "Accept");
+                await Application.Current.MainPage.DisplayAlert(Languages.Error, connection.Message, Languages.Accept);
                 return;
             }
 
             var url = Application.Current.Resources["UrlAPI"].ToString();
+            var prefix = Application.Current.Resources["UrlPrefix"].ToString();
+            var controller = Application.Current.Resources["UrlProductosJchController"].ToString();
 
-            var response = await this.apiService.GetList<TBM_PRODU_JCH>(url, "/api","/ProductosJch");
+            var response = await this.apiService.GetList<TBM_PRODU_JCH>(url, prefix,controller);
             if (!response.IsSuccess)
             {
                 this.IsRefreshing = false;
-                await Application.Current.MainPage.DisplayAlert("Error",response.Message,"Accept");
+                await Application.Current.MainPage.DisplayAlert(Languages.Error,response.Message, Languages.Accept);
                 return;
             }
 

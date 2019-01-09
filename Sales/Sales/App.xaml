@@ -11,6 +11,8 @@
             
             <!--Parameters-->
             <x:String x:Key="UrlAPI">http://apimyperjuan.azurewebsites.net</x:String>
+            <x:String x:Key="UrlPrefix">/api</x:String>
+            <x:String x:Key="UrlProductosJchController">/ProductosJch</x:String>
 
 
         </ResourceDictionary>

@@ -8,6 +8,7 @@ namespace Sales.Services
     using System.Net.Http;
     using System.Threading.Tasks;
     using Common.Models;
+    using Helpers;
     using Newtonsoft.Json;
     using Plugin.Connectivity;
 
@@ -21,7 +22,7 @@ namespace Sales.Services
                 return new Response
                 {
                     IsSuccess = false,
-                    Message = "Please turn on your Internet Settings.",
+                    Message = Languages.TurnOnInternet,
                 };
             }
 
@@ -31,7 +32,7 @@ namespace Sales.Services
                 return new Response
                 {
                     IsSuccess = false,
-                    Message = "No Internet Connection",
+                    Message = Languages.NoInternet,
                 };
             }
 
