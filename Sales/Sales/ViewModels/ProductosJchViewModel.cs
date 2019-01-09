@@ -12,11 +12,11 @@ namespace Sales.ViewModels
     public class ProductosJchViewModel : BaseViewModel
     {
         private ApiService apiService;
-        private ObservableCollection<TBM_PRODU_JCH> tbm_Produ_Jch;
-        public ObservableCollection<TBM_PRODU_JCH> Tbm_Produ_Jch
+        private ObservableCollection<TBM_PRODU_JCH> productosJch;
+        public ObservableCollection<TBM_PRODU_JCH> ProductosJch
         {
-            get { return this.tbm_Produ_Jch; }
-            set { this.SetValue(ref this.tbm_Produ_Jch, value); }
+            get { return this.productosJch; }
+            set { this.SetValue(ref this.productosJch, value); }
         }
 
         public ProductosJchViewModel()
@@ -35,7 +35,7 @@ namespace Sales.ViewModels
             }
 
             var list = (List<TBM_PRODU_JCH>)response.Result;
-            this.Tbm_Produ_Jch = new ObservableCollection<TBM_PRODU_JCH>(list);
+            this.ProductosJch = new ObservableCollection<TBM_PRODU_JCH>(list);
         }
     }
 }
