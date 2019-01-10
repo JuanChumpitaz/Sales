@@ -19,12 +19,29 @@ namespace Sales.API_2.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/ProductosJch
-        public IQueryable<TBM_PRODU_JCH> GetTBM_PRODU_JCH()
+        public List<TBM_PRODU_JCH> GetTBM_PRODU_JCH()
         {
-            return db.TBM_PRODU_JCH;
+            var prueba = db.TBM_PRODU_JCH.Where(t => t.DES_PRODU.Contains("HP") 
+            && t.Remarks.Contains("EST")).ToList();
+            //Fecha de ahora Datetime.NOW
+            //var prueba = db.TBM_PRODU_JCH.Where(t => t.COD_PRODU==3).ToList();
+            //var prueba = db.TBM_PRODU_JCH.Where(t => t.DES_PRODU.Contains("HP")).ToList();
+            return prueba;
         }
 
         // GET: api/ProductosJch/5
+        //[ResponseType(typeof(TBM_PRODU_JCH))]
+        //public IHttpActionResult GetTBM_PRODU_JCH(int id)
+        //{
+        //    TBM_PRODU_JCH tBM_PRODU_JCH = db.TBM_PRODU_JCH.Find(id);
+        //    if (tBM_PRODU_JCH == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return Ok(tBM_PRODU_JCH);
+        //}
+
         [ResponseType(typeof(TBM_PRODU_JCH))]
         public async Task<IHttpActionResult> GetTBM_PRODU_JCH(int id)
         {
@@ -36,6 +53,7 @@ namespace Sales.API_2.Controllers
 
             return Ok(tBM_PRODU_JCH);
         }
+
 
         // PUT: api/ProductosJch/5
         [ResponseType(typeof(void))]

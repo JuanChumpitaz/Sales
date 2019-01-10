@@ -11,6 +11,7 @@ namespace Sales.Domain.Models
 
         public DataContext() : base("conexion")
         {
+
         }
 
         // ESTA LINEA MAPEA LA TABLA Y LA CREA EN LA BD CON EL NOMBRE TBM_PRODU_JCH

@@ -134,4 +134,19 @@
     <value>Products</value>
     <comment>Products</comment>
   </data>
+  <data name="AddProduct" xml:space="preserve">
+    <value>Add Product</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DescriptionPlaceholder" xml:space="preserve">
+    <value>Enter product descriptcion...</value>
+  </data>
+  <data name="Remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="RemarkPlaceholder" xml:space="preserve">
+    <value>Enter remark...</value>
+  </data>
 </root>

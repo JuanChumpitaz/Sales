@@ -41,5 +41,25 @@ namespace Sales.Helpers
         {
             get { return Resource.TurnOnInternet; }
         }
+        public static string AddProduct
+        {
+            get { return Resource.AddProduct; }
+        }
+        public static string Description
+        {
+            get { return Resource.Description; }
+        }
+        public static string DescriptionPlaceholder
+        {
+            get { return Resource.DescriptionPlaceholder; }
+        }
+        public static string Remark
+        {
+            get { return Resource.Remark; }
+        }
+        public static string RemarkPlaceholder
+        {
+            get { return Resource.RemarkPlaceholder; }
+        }
     }
 }

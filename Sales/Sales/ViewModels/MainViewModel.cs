@@ -11,6 +11,8 @@ namespace Sales.ViewModels
     {
         public ProductosJchViewModel ProductosJch { get; set; }
 
+        public AddProductViewModel AddProduct { get; set; }
+
         public MainViewModel()
         {
             this.ProductosJch = new ProductosJchViewModel();
@@ -25,6 +27,7 @@ namespace Sales.ViewModels
 
         private void GotoAddProduct()
         {
+            this.AddProduct = new AddProductViewModel();
             Application.Current.MainPage.Navigation.PushAsync(new AddProductPage());
         }
     }
