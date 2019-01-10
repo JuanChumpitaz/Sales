@@ -14,7 +14,7 @@ namespace Sales.Common.Models
         [StringLength(50)]// maximo 50 caracteres
         public string DES_PRODU       {get;set;}
 
-        [DataType(DataType.MultilineText)]
+        [DataType(DataType.MultilineText)]//Notas - Remarks
         public string Remarks { get; set; }
 
         [Display(Name ="Image")]
@@ -29,6 +29,18 @@ namespace Sales.Common.Models
 
         [DataType(DataType.Date)]
         public DateTime FEC_USUAR_MODIF {get;set;}
+
+        public string  ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.ImagePath))
+                {
+                    return "NoProduct";
+                }
+                return $"http://backendmyperjuan.azurewebsites.net/{this.ImagePath.Substring(1)}";
+            }
+        }
 
         public override string ToString()
         {

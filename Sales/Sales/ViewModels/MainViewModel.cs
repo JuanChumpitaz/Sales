@@ -1,9 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace Sales.ViewModels
 {
+    using System.Windows.Input;
+    using GalaSoft.MvvmLight.Command;
+    using Views;
+    using Xamarin.Forms;
+
     public class MainViewModel
     {
         public ProductosJchViewModel ProductosJch { get; set; }
@@ -11,6 +14,18 @@ namespace Sales.ViewModels
         public MainViewModel()
         {
             this.ProductosJch = new ProductosJchViewModel();
+        }
+        public ICommand  AddProductCommand
+        {
+            get
+            {
+                return new RelayCommand(GotoAddProduct); 
+            }
+        }
+
+        private void GotoAddProduct()
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new AddProductPage());
         }
     }
 }

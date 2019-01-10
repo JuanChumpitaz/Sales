@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
 
 namespace Sales.Domain.Models
 {
+    using Sales.Common.Models;
+    using System.Data.Entity;
+
     public class DataContext : DbContext
     {
 
@@ -14,6 +13,7 @@ namespace Sales.Domain.Models
         {
         }
 
-        public System.Data.Entity.DbSet<Sales.Common.Models.TBM_PRODU_JCH> TBM_PRODU_JCH { get; set; }
+        // ESTA LINEA MAPEA LA TABLA Y LA CREA EN LA BD CON EL NOMBRE TBM_PRODU_JCH
+        public DbSet<TBM_PRODU_JCH> TBM_PRODU_JCH { get; set; }
     }
 }
