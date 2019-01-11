@@ -141,10 +141,13 @@
   <data name="DescriptionPlaceholder" xml:space="preserve">
     <value>Introduzca la descripción del producto ...!</value>
   </data>
-  <data name="Remark" xml:space="preserve">
-    <value>Observación</value>
+  <data name="Remarks" xml:space="preserve">
+    <value>Observaciones</value>
   </data>
-  <data name="RemarkPlaceholder" xml:space="preserve">
-    <value>Introduzca comentario ...!</value>
+  <data name="Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="ChangeImage" xml:space="preserve">
+    <value>Toca la imagen para cambiarla.</value>
   </data>
 </root>

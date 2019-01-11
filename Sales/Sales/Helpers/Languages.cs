@@ -53,13 +53,17 @@ namespace Sales.Helpers
         {
             get { return Resource.DescriptionPlaceholder; }
         }
-        public static string Remark
+        public static string Remarks
         {
-            get { return Resource.Remark; }
+            get { return Resource.Remarks; }
         }
-        public static string RemarkPlaceholder
+        public static string Save
         {
-            get { return Resource.RemarkPlaceholder; }
+            get { return Resource.Save; }
+        }
+        public static string ChangeImage
+        {
+            get { return Resource.ChangeImage; }
         }
     }
 }

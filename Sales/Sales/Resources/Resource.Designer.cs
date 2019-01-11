@@ -79,6 +79,15 @@ namespace Sales.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Touch the image to change it..
+        /// </summary>
+        public static string ChangeImage {
+            get {
+                return ResourceManager.GetString("ChangeImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
@@ -124,20 +133,20 @@ namespace Sales.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remark.
+        ///   Looks up a localized string similar to Remarks.
         /// </summary>
-        public static string Remark {
+        public static string Remarks {
             get {
-                return ResourceManager.GetString("Remark", resourceCulture);
+                return ResourceManager.GetString("Remarks", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter remark....
+        ///   Looks up a localized string similar to Save.
         /// </summary>
-        public static string RemarkPlaceholder {
+        public static string Save {
             get {
-                return ResourceManager.GetString("RemarkPlaceholder", resourceCulture);
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         
