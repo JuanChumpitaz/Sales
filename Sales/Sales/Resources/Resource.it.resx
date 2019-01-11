@@ -150,4 +150,21 @@
   <data name="ChangeImage" xml:space="preserve">
     <value>Tocca l'immagine per cambiarla.</value>
   </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>Devi inserire una descrizione.!</value>
+  </data>
+
+  <data name="ImageSource" xml:space="preserve">
+	<value>Dove prendi immagine ?</value>
+  </data>
+  <data name="FromGallery" xml:space="preserve">
+	<value>Dalla galleria!</value>
+  </data>
+  <data name="NewPicture" xml:space="preserve">
+	<value>Scatta una nuova foto</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+	<value>Annulla</value>
+  </data>
+
 </root>

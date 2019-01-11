@@ -65,5 +65,32 @@ namespace Sales.Helpers
         {
             get { return Resource.ChangeImage; }
         }
+        public static string DescriptionError
+        {
+            get { return Resource.DescriptionError; }
+        }
+
+
+
+        public static string ImageSource
+        {
+            get { return Resource.ImageSource; }
+        }
+
+        public static string FromGallery
+        {
+            get { return Resource.FromGallery; }
+        }
+
+        public static string NewPicture
+        {
+            get { return Resource.NewPicture; }
+        }
+
+        public static string Cancel
+        {
+            get { return Resource.Cancel; }
+        }
+
     }
 }

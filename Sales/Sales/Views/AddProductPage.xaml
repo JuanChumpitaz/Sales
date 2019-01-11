@@ -12,7 +12,10 @@
             <StackLayout
                 Padding="5">
                 <Image
-                    Source="NoProduct">
+                    Source="{Binding ImageSource}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>
+                    </Image.GestureRecognizers>
                 </Image>
                 <Label
                     Text="{i18n:Translate ChangeImage}"
@@ -37,7 +40,8 @@
                     <Entry
                         Grid.Row="0"
                         Grid.Column="1"
-                         Placeholder="{i18n:Translate DescriptionPlaceholder}">
+                        Text="{Binding Description}"
+                        Placeholder="{i18n:Translate DescriptionPlaceholder}">
                     </Entry>
                     <Label
                         Grid.Row="1"
@@ -48,17 +52,22 @@
                     <Editor
                         Grid.Row="1"
                         Grid.Column="1"
+                        Text="{Binding Remarks}"
                         VerticalOptions="FillAndExpand">
                     </Editor>
                 </Grid>
                 
-                <ActivityIndicator>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
                 <Button
                     BackgroundColor="Navy"
                     TextColor="White"
                     BorderRadius="23"
                     HeightRequest="46"
+                    Command="{Binding SaveCommand}"
+                    IsEnabled="{Binding IsEnabled}"
                     Text="{i18n:Translate Save}">
                 </Button>
             </StackLayout>
