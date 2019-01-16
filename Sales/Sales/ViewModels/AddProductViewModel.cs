@@ -62,7 +62,7 @@ namespace Sales.ViewModels
             }
         }
 
-        private async void ChangeImage()
+        private async void ChangeImage()//METODO PARA TOMAR FOTO O SELECCIONAR IMAGEN DE LA GALERIA
         {
             await CrossMedia.Current.Initialize();
 
@@ -79,7 +79,7 @@ namespace Sales.ViewModels
                 return;
             }
 
-            if (source == Languages.NewPicture)
+            if (source == Languages.NewPicture) // PARA ABRIR LA CAMARA Y TOMAR FOTO
             {
                 this.file = await CrossMedia.Current.TakePhotoAsync(
                     new StoreCameraMediaOptions
@@ -92,14 +92,14 @@ namespace Sales.ViewModels
             }
             else
             {
-                this.file = await CrossMedia.Current.PickPhotoAsync();
+                this.file = await CrossMedia.Current.PickPhotoAsync();// PARA ABRIR LA GALERIA Y ELEGIR ALGUNA IMAGEN
             }
 
-            if (this.file != null)
+            if (this.file != null)// SI EL USUARIO SI SELECCIONÓ LA IMAGEN DE LA GALERIA
             {
                 this.ImageSource = ImageSource.FromStream(() =>
                 {
-                    var stream = file.GetStream();
+                    var stream = this.file.GetStream();
                     return stream;
                 });
             }
